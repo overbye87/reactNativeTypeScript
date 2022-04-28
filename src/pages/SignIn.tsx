@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
   StyleSheet,
@@ -7,7 +8,9 @@ import {
   View,
 } from 'react-native';
 
-const SignIn: React.FC = ({navigation}) => {
+const SignIn: React.FC = () => {
+  const navigation = useNavigation<string>();
+
   return (
     <>
       <View style={styles.сontainer}>
