@@ -1,42 +1,41 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {StyleSheet, Text, View} from 'react-native';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.background}>
+    <>
       <View style={styles.сontainer}>
-        <Text>Hello world!</Text>
+        <View style={styles.logo}>
+          <Text style={styles.logoText}>LOGO APP</Text>
+        </View>
       </View>
-    </SafeAreaView>
+      <View style={styles.сontainer}>
+        <Text>DOWN</Text>
+      </View>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  background: {
-    backgroundColor: 'darkgray',
-  },
   сontainer: {
-    height: '100%',
-    display: 'flex',
+    flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  logo: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'lightgray',
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    borderWidth: 2,
+    borderColor: 'red',
+  },
+  logoText: {
+    color: 'red',
+    fontSize: 30,
   },
 });
 
